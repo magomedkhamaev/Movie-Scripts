@@ -7,7 +7,7 @@ const FullPost = () => {
     const {id} = useParams();
     React.useEffect(() => {
       
-        axios.get(`https://movie-scripts.onrender.com/posts/${id}`).then(({data}) => {
+        axios.get(`http://localhost:4444/posts/${id}`).then(({data}) => {
           setDat(data);
           console.log(data);
         }).catch(err => {

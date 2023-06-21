@@ -28,7 +28,7 @@ export const AddPost = () => {
       const file = event.target.files[0];
      const formData = new FormData();
      formData.append('image', file);
-     const { data } = await axios.post('https://movie-scripts.onrender.com/upload', formData);
+     const { data } = await axios.post('http://localhost:4444/upload', formData);
      setImageUrl(data.url);
      console.log(data);
     } 
@@ -59,8 +59,8 @@ export const AddPost = () => {
       }; 
     //   isEditing 
     //   ? await axios.patch(`/posts/${id}`, fields)
-      const { data } = isEditing ? await axios.put(`https://movie-scripts.onrender.com/posts/${id}`, fields)
-      :await axios.post('https://movie-scripts.onrender.com/posts/', fields);
+      const { data } = isEditing ? await axios.put(`http://localhost:4444/posts/${id}`, fields)
+      :await axios.post('http://localhost:4444/posts/', fields);
       // const _id =  data._id;
       navigate(`/`);
     } 
@@ -71,7 +71,7 @@ export const AddPost = () => {
   }
   React.useEffect(() => {
     if (id) {
-      axios.get(`https://movie-scripts.onrender.com/posts/${id}`).then(({data}) => {
+      axios.get(`http://localhost:4444/posts/${id}`).then(({data}) => {
         setTitle(data.title);
         setAuthor(data.author);
         setText(data.text);
@@ -116,7 +116,7 @@ export const AddPost = () => {
         <Button variant="contained" color="error" onClick={onClickRemoveImage}>
           Удалить
         </Button>
-        <img style={{maxWidth: "30%",marginBottom: "3rem"}} src={`https://movie-scripts.onrender.com${imageUrl}`} alt="Uploaded" />
+        <img style={{maxWidth: "30%",marginBottom: "3rem"}} src={`http://localhost:4444${imageUrl}`} alt="Uploaded" />
         </>   
       )} 
       <br />

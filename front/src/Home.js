@@ -17,7 +17,7 @@ const Home = () => {
 
   React.useEffect(() => {
     const search = title  ? `title=${title}` : '';
-      axios.get(`https://movie-scripts.onrender.com/posts/?limit=${limit}&${search}`).then(({data}) => {
+      axios.get(`http://localhost:4444/posts/?limit=${limit}&${search}`).then(({data}) => {
         setDat(data);
         setLoading(false)
       }).catch(err => {
@@ -40,7 +40,7 @@ const Home = () => {
        <div id="list-th">
        <div className="book read">
         <div className="cover">
-          <img src={`https://movie-scripts.onrender.com${item?.imageUrl}`}/>
+          <img src={`http://localhost:4444${item?.imageUrl}`}/>
         </div>
         <div className="description">
           <p className="title">{item?.title} <br/>

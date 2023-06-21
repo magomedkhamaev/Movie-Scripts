@@ -31,9 +31,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 app.use(express.json({limit: '50mb'}));
-app.use(cors({
-  origin: ['https://sweet-alpaca-6d4cd7.netlify.app',],
-}));
+app.use(cors());
 app.use('/uploads', express.static('uploads'));
 
 
