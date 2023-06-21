@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+@media only screen and (max-width: 426px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+
+
+
+.book {
+  display: inline-block;
+  width: 230px;
+  max-height: 470px;
+  box-shadow: 0 0 12px #aaa;
+  margin: px;
+  /* padding: 10px 10px 0 10px; */
+  vertical-align: top;
+  transition: height 1s;
+}
+
+.title{
+  font-weight: 700;
+  color: black;
+}
+.cover {
+  /* border: 2px solid gray; */
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.cover img {
+  width: 100%;
+}
+
+.book p {
+  margin-top: 8px;
+  font-size: 20px;
+  padding-left: 5px;
+  margin-bottom: 0;
+}
+.buy-btn {
+  margin-top: 0.5rem;
+  margin-left: 1px;
+  margin-bottom: 6px;
+  background-color: #141414;
+  padding: 0.1rem 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.book .author {
+  font-size: 15px;
+  display: flex;
+}
+/* ======================== */
+.header {
+  /* width: 100%; */
+  z-index: 100;
+  padding-top: 1rem;
+  background-color: blue;
+  margin-bottom: 2rem;
+  }
+  .input{
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 1px solid rgba(000,0,0, 0.1);
+    border-radius: 15px;
+    transition: all 0.15s;
+    margin-bottom: 0.5rem;
+  }
+  .nav__logo{
+   font-style: normal;
+   font-weight: 700;
+   font-size: 25.9979px;
+   color: white;
+   margin-left: 4px;
+   margin-right: 6px;
+   margin-bottom: 1rem;
+   text-decoration: none;
+  }
+  .nav{
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+  .nav__list{
+     display: flex;
+  }
+  .nav__item{
+    margin-left: 10px;
+  }
+  .nav__link{
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   color: #000F26;
+   /* font-family: var(--body-font); */
+  }
+  .nav__input{
+    color: var(--text-color);
+    /* font-family: var(--body-font); */
+    font-size: var(--normal-font-size);
+    border: none;
+    outline: none;
+    padding: 0.25rem 0.5rem 0.5rem 0rem;
+  }
+  .nav__icon-publish{
+    margin-right: 7px;
+  }
+  
+  .nav__button{
+    padding: 1rem 2.5rem;
+    background-color: #091E42;
+    border-radius: 28px;
+  }
+  .nav__butto{
+    font-weight: 500;
+    font-size: 16px;
+    background: none;
+    color: #fff;
+  }
